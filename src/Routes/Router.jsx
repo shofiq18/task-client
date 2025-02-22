@@ -5,6 +5,7 @@ import {
 import Home from "../Pages/Home/Home";
 import MainLayout from "../Layout/MainLayout";
 import Login from "../Pages/LogIn";
+import PrivateRoute from "../components/PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -13,7 +14,7 @@ export const router = createBrowserRouter([
         children: [
             {
                 path: "/",
-                element: <Home />,
+                element: <PrivateRoute><Home /></PrivateRoute>,
             },
             {
                 path: "/login",
