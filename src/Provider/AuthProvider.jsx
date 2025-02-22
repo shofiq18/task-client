@@ -17,7 +17,7 @@ export const AuthProvider = ({ children }) => {
       };
 
       // Store user details in the backend
-      await fetch("http://localhost:5000/users", {
+      await fetch("https://task-server-woad.vercel.app/users", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(loggedInUser),
