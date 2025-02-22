@@ -49,21 +49,7 @@ const Profile = () => {
           </div>
         </div>
 
-        {/* Optional: User Posts or Activity */}
-        <div className="mt-8 bg-white rounded-lg shadow-lg p-6">
-          <h2 className="text-2xl font-semibold text-gray-800">Recent Activity</h2>
-          <div className="space-y-4">
-            {/* Display posts or tasks */}
-            <div className="bg-gray-200 p-4 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-700">Task 1</h3>
-              <p className="text-gray-600">Details about the task...</p>
-            </div>
-            <div className="bg-gray-200 p-4 rounded-lg shadow-sm">
-              <h3 className="text-xl font-semibold text-gray-700">Task 2</h3>
-              <p className="text-gray-600">Details about the task...</p>
-            </div>
-          </div>
-        </div>
+      
       </div>
     </div>
   );
