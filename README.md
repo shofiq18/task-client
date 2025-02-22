@@ -4,7 +4,8 @@
 A real-time **Task Management Application** where users can add, edit, delete, and reorder tasks using a drag-and-drop interface. Tasks are categorized into three sections: **To-Do, In Progress, and Done**. The application supports authentication via **Firebase Authentication** and stores user data in **MongoDB**. Real-time updates are implemented using **Socket.io**.
 
 ## 🚀 Live Demo
-[Live Application Link](#) *(Add your live deployed link here)*
+
+[Live Application Link](#) *(https://task-management-3a788.web.app/)*
 
 ## 🛠 Technologies Used
 - **Frontend:** React.js (Vite.js), Firebase Authentication, React Beautiful DnD, Tailwind CSS, Socket.io-client

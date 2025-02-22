@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import axios from "axios";
+import { FaEdit, FaTrash } from "react-icons/fa"; // Import React icons
 import io from "socket.io-client";
 
 // Establish the connection to the backend's socket
@@ -216,22 +217,26 @@ const TaskBoard = () => {
                               {...provided.draggableProps}
                               {...provided.dragHandleProps}
                               ref={provided.innerRef}
-                              className="bg-gray-700 p-4 mb-2 rounded shadow relative"
+                              className="bg-gray-700 p-4 mb-2 rounded shadow relative flex flex-col justify-between h-full"
                             >
-                              <h3 className="text-lg font-bold">{task.title}</h3>
-                              <p className="text-sm">{task.description}</p>
-                              <div className="absolute top-2 right-2 space-x-2">
+                              <div>
+                                <h3 className="text-lg font-bold truncate">{task.title}</h3>
+                                <p className="text-sm break-words overflow-hidden">{task.description}</p>
+                              </div>
+
+                              {/* Buttons at the bottom */}
+                              <div className="mt-2 flex justify-end space-x-2 z-10">
                                 <button
                                   onClick={() => setEditingTask(task)}
                                   className="bg-yellow-500 text-white px-3 py-1 rounded transform hover:scale-105 transition-all duration-300"
                                 >
-                                  Edit
+                                  <FaEdit />
                                 </button>
                                 <button
                                   onClick={() => handleDeleteTask(task._id)}
                                   className="bg-red-500 text-white px-3 py-1 rounded transform hover:scale-105 transition-all duration-300"
                                 >
-                                  Delete
+                                  <FaTrash />
                                 </button>
                               </div>
                             </div>
