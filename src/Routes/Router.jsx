@@ -6,6 +6,7 @@ import Home from "../Pages/Home/Home";
 import MainLayout from "../Layout/MainLayout";
 import Login from "../Pages/LogIn";
 import PrivateRoute from "../components/PrivateRoute";
+import Profile from "../Pages/Profile";
 
 export const router = createBrowserRouter([
     {
@@ -19,6 +20,10 @@ export const router = createBrowserRouter([
             {
                 path: "/login",
                 element: <Login />,
+            },
+            {
+                path: "/profile", 
+                element: <Profile></Profile>,
             }
 
         ]
